@@ -35,8 +35,6 @@ export default class LoginComponent implements OnInit {
   login(){
 
     this.authService.login(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value).then((res) => {
-      console.log(res);
-
       this.router.navigateByUrl('messages')
     }).catch((error:any) => {
       console.log(error);
@@ -54,8 +52,6 @@ export default class LoginComponent implements OnInit {
     this.loginForm.get('password')?.value,
     this.loginForm.get('userName')?.value)
     .then((res) => {
-      console.log(res);
-
         this.login();
     }).catch((error:any) => {
       console.log(error);

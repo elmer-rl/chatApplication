@@ -13,7 +13,6 @@ export class AuthService {
     this.user = afAuth.authState;
   }
 
-
   async register(user:string, password:string, userName:string){
 
   const result: any = await this.afAuth.createUserWithEmailAndPassword(user, password);
